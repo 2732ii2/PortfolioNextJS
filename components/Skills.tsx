@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { IconType } from 'react-icons'
+import { IconBaseProps, IconType } from 'react-icons'
 import { 
   FaReact, 
   FaJs, 
@@ -127,7 +127,7 @@ export default function Skills() {
       <div className="flex  sm:flex-nowrap flex-wrap justify-center gap-6 mb-12">
         {Object.entries(categories).map(([key, category]) => {
           const isActive = activeCategory === key
-          const CategoryIcon = category.icon
+          const CategoryIcon:any = category.icon;
           console.log("=>",category.color);
           return (
             <motion.button
@@ -156,6 +156,7 @@ export default function Skills() {
            {
             const {color}=(categories[skill.category])
             console.log(color);
+            const Icon:any=skill.icon;
             // emerald   indigo purple and sky
             return (
 
@@ -175,7 +176,7 @@ export default function Skills() {
                             transform hover:-translate-y-1 border border-gray-100">
                 <div className="flex items-start gap-4">
                   <div className={`p-3 rounded-lg ${color=="sky"?"bg-sky-100":color=="emerald"?"bg-emerald-100":color=="purple"?"bg-purple-100":color=="orange"?"bg-orange-100":"bg-indigo-100"}`}>
-                    <skill.icon className={`text-2xl ${color=="sky"?"text-sky-500":color=="emerald"?"text-emerald-500":color=="purple"?"text-purple-500":color=="orange"?"text-orange-500":"text-indigo-500"}`} />
+                    <Icon className={`text-2xl ${color=="sky"?"text-sky-500":color=="emerald"?"text-emerald-500":color=="purple"?"text-purple-500":color=="orange"?"text-orange-500":"text-indigo-500"}`} />
                   </div>
                   <div className="flex-1">
                     <h3 className={`text-lg font-semibold ${color=="sky"?"text-sky-500":color=="emerald"?"text-emerald-500":color=="purple"?"text-purple-500":color=="orange"?"text-orange-500":"text-indigo-500"} mb-2`}>{skill.name}</h3>

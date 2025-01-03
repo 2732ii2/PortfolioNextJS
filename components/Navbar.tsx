@@ -2,8 +2,9 @@
 import { CiMenuFries } from "react-icons/ci";
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import React from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-
+import type { IconType } from 'react-icons';
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
@@ -77,14 +78,18 @@ type Props={
   scrollToSection:Function;
 }
 
+
+
 const MainFunc=(props:Props)=>{
   props.scrollToSection
+  const Icon1:any=IoIosCloseCircleOutline;
+  const Icon2:any=CiMenuFries;
   const [hide,setHide]=useState<boolean>(true);
   return <div  className="w-[100%]  relative sm:hidden items-center justify-end pr-5 text-black text-[20px] flex min-h-[40px] mb-3 bg-[rgba(0,0,0,.02)]">
-  <div onClick={()=>setHide(!hide)}><CiMenuFries /></div>
+  <div onClick={()=>setHide(!hide)}> <Icon2 /> </div>
  { <div className={` absolute w-[500px] !transition-all flex items-center justify-center !backdrop-blur-lg h-[500px] rounded-[50%] bg-[rgba(0,0,0,.1)] ${hide ? " -mt-[100%] -left-[110%]   ":"  "} `}>
   
- <IoIosCloseCircleOutline onClick={()=>setHide(!hide)} className=" absolute top-[50%] right-[20px] " />
+ <Icon1 onClick={()=>setHide(!hide)} className=" absolute top-[50%] right-[20px] " />
      
   <div className="flex flex-col mt-[30%] ">
     {

@@ -38,7 +38,7 @@ const projects1 = [
   {
     number: "1",
     image: LMS,
-    backgroundColor: "bg-[rgba(200,0,0,.8)]",
+    backgroundColor: "bg-[rgba(0,0,0,.5)]",
     description: "Library management app with real-time admin dashboard updates. Implemented role-based access control for Users, Librarians, and Admins, each with protected routes and specific features. Future plans include adding an overdue flow with a payment system and a cron job for automating updates..",
     Link:`https://librarymanagementwebapp.vercel.app/`
 
@@ -112,6 +112,7 @@ export default function ProjectsSection() {
 
 const Card=(props:any)=>{
   const {projects}=props;
+  const ICon_1:any=RiExternalLinkLine;
   return (
     <div className="grid grid-cols-1    md:grid-cols-3 gap-5 mb-16">
         {projects.map((project:proObj, index:number) => (
@@ -146,7 +147,7 @@ const Card=(props:any)=>{
                 // window.location.href(`${project}`)
               }} className=" absolute top-[10px] cursor-pointer !text-[20px] right-[20px] "><RiExternalLinkLine /></div> */}
               <Link href={`${project.Link}`} target="_blank" className=" absolute top-[10px] cursor-pointer !text-[20px] right-[20px] ">
-              <RiExternalLinkLine />
+              <ICon_1 />
               </Link>
             </div>
             <p className="mt-6 text-lg font-medium text-black leading-relaxed">

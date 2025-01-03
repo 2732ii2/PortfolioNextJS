@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Skills from '../components/Skills'
 import Achievements from '../components/Achievements'
-import Projects from '../components/Projects'
+// import Projects from '../components/Projects'
 import Navbar from '../components/Navbar'
 import Loader from '../components/Loader'
 import port from "./Port.jpeg";
 import { motion, AnimatePresence } from 'framer-motion'
-import PortfolioSection from '@/components/Projects/portfolio-section'
+// import PortfolioSection from '@/components/Projects/portfolio-section'
 import ProjectsSection from '@/components/Projects/projects-section'
 
 export default function Home() {

@@ -31,7 +31,7 @@ export default function Achievements() {
     <div>
       <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Achievements</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {achievements.map((achievement, index) => (
+        {achievements.map((achievement:any, index) => (
           <motion.div
             key={index}
             className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
